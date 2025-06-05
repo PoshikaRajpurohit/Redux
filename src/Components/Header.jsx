@@ -1,21 +1,25 @@
-import { Container, Navbar } from "react-bootstrap";
-import { Link } from "react-router";
+import { Container, Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom"; 
+import "../App.css"; 
+import logo from "../assets/images/Logo.avif"
 
 const Header = () => {
   return (
-    <>
-      <Navbar className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="/">Appy Book Store</Navbar.Brand>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              <Link to={"/add-book"}>Add Book</Link>
-            </Navbar.Text>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+    <Navbar className="custom-navbar shadow-sm py-3" expand="lg">
+      <Container>
+        <Navbar.Brand as={Link} to="/" className="fw-bold text-primary fs-4">
+          <img src={logo} alt="logo" height={"50px"} />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbar-nav" />
+        <Navbar.Collapse id="navbar-nav" className="justify-content-end">
+          <Nav>
+            <Nav.Link as={Link} to="/add-book" className="nav-add-book fw-semibold px-3">
+              ➕ Add Book
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 

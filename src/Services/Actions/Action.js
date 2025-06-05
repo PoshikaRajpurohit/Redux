@@ -9,6 +9,7 @@ export const addNewBook = (data) => {
 export const getAllBooks = () => {
     return {
         type: "GET_ALL_BOOKS"
+        
     }
 };
 
@@ -32,3 +33,16 @@ export const updateBook = (data) => {
         payload: data
     }
 };
+export const Loading=()=>{
+    return{
+        type:"LOADING"
+    }
+}
+export const getAllBooksAsync=()=>{
+    return(dispatch)=>{
+        dispatch(Loading());
+        setTimeout(()=>{
+            dispatch(getAllBooks())
+        },3000)
+    }
+}

@@ -1,0 +1,37 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hospital-navbar {
+  background-color: #e8f6f9; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #00a896; 
+  padding: 0.75rem 1rem;
+}
+
+.hospital-logo {
+  width: 80px;
+  height: auto;
+}
+.hospital-navbar .btn-success {
+  background-color: #00a896; 
+  border: 2px solid #00a896;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size:20px;
+}
+.hospital-navbar .btn-success:hover {
+  background-color: #02897a;
+}
+@media (max-width: 768px) {
+  .hospital-navbar {
+    text-align: center;
+  }
+  .hospital-navbar .btn-success {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
